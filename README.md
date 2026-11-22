@@ -1,5 +1,7 @@
 # Job Applier
 
+[![CI](https://github.com/Coder02Aniket/job-applier/actions/workflows/ci.yml/badge.svg)](https://github.com/Coder02Aniket/job-applier/actions/workflows/ci.yml)
+
 Spring Boot pipeline: ingest jobs (LinkedIn / Naukri / Indeed) -> rank by resume match + recency ->
 tailor resume (no invented facts) -> draft recruiter mail -> **you approve** -> apply + send.
 
