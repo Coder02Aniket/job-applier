@@ -27,6 +27,10 @@ jobs:
       - name: Make Maven wrapper executable
         run: chmod +x ./mvnw
 
+      # docker-java defaults to a very old API version; newer daemons reject it.
+      - name: Align Docker API version with the runner daemon
+        run: echo "DOCKER_API_VERSION=$(docker version --format '{{.Server.APIVersion}}')" >> "$GITHUB_ENV"
+
       # Docker is preinstalled on ubuntu-latest, so Testcontainers can start Postgres.
       - name: Verify (compile + tests)
         run: ./mvnw -B verify
