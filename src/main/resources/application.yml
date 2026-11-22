@@ -1,0 +1,47 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/jobapplier
+    username: jobapplier
+    password: jobapplier
+  jpa:
+    hibernate.ddl-auto: validate
+    open-in-view: false
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${MAIL_USERNAME:}
+    password: ${MAIL_APP_PASSWORD:}
+    properties.mail.smtp: { auth: true, starttls.enable: true }
+     
+
+app:
+  resume-path: data/resumes/resume.pdf
+  tailored-dir: data/tailored
+  prefs:
+    roles: ["Java Developer", "Spring Boot Developer", "Backend Engineer"]
+    locations: ["Pune", "Remote"]
+    max-age-days: 7
+    min-score: 0.35
+  limits:
+    top-n-per-day: 15
+    max-mails-per-day: 12
+    max-applies-per-day: 15
+    follow-up-after-days: 6
+  schedule:
+    ingest-cron: "0 0 */6 * * *"
+    follow-up-cron: "0 0 10 * * *"
+  playwright:
+    headless: false
+    session-dir: data/playwright-session
+    delay-ms-min: 2500
+    delay-ms-max: 7000
+  llm:
+    api-key: ${ANTHROPIC_API_KEY:}
+    model: claude-sonnet-4-6
+    base-url: https://api.anthropic.com
+  security:
+    # Off for local dev + tests; the prod profile flips this on.
+    enabled: false
+    username: ${APP_USERNAME:user}
+    password: ${APP_PASSWORD:pass}

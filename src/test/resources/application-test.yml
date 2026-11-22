@@ -1,0 +1,37 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/jobapplier
+    username: jobapplier
+    password: jobapplier
+  jpa:
+    hibernate.ddl-auto: validate
+    open-in-view: false
+  mail:
+    host: localhost
+    port: 25
+
+app:
+  resume-path: src/test/resources/fixtures/resume.txt
+  tailored-dir: target/test-tailored
+  prefs:
+    roles: ["Java Developer", "Backend Engineer"]
+    locations: ["Pune", "Remote"]
+    max-age-days: 7
+    min-score: 0.35
+  limits:
+    top-n-per-day: 5
+    max-mails-per-day: 5
+    max-applies-per-day: 5
+    follow-up-after-days: 6
+  schedule:
+    ingest-cron: "-"
+    follow-up-cron: "-"
+  playwright:
+    headless: true
+    session-dir: target/test-playwright
+    delay-ms-min: 100
+    delay-ms-max: 200
+  llm:
+    api-key: test-key
+    model: test-model
+    base-url: http://localhost:8080/mock-llm

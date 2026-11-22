@@ -1,0 +1,10 @@
+target/
+data/resumes/*
+data/tailored/*
+data/playwright-session/
+data/tokens/
+.env
+node_modules/
+frontend/dist/
+.idea/
+*.iml

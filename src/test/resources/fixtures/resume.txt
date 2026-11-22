@@ -1,0 +1,17 @@
+Jane Doe
+jane.doe@example.com | +1 555-0199 | Pune, India
+Experienced Java and Spring Boot Developer with 5 years of experience building scalable backend microservices.
+Skills: Java, Spring Boot, Hibernate, JPA, PostgreSQL, Docker, Kubernetes, AWS, REST, Microservices, JUnit, Maven, Git.
+
+Experience:
+Senior Software Engineer - Acme Corp (2021 - Present)
+- Architected and built high-throughput Spring Boot REST microservices handling 2M requests/day.
+- Integrated PostgreSQL with Hibernate/JPA and optimized query performance by 40%.
+- Automated CI/CD pipelines with Docker and Kubernetes on AWS.
+
+Software Engineer - Tech Solutions (2019 - 2021)
+- Developed RESTful APIs in Java 11 and Spring Boot.
+- Maintained unit tests with JUnit 5 and Mockito, keeping test coverage above 85%.
+
+Education:
+B.Tech in Computer Science - University of Pune (2015 - 2019)

@@ -1,0 +1,13 @@
+# Production profile: enforce single-user basic auth on /api/**
+# Provide APP_USERNAME / APP_PASSWORD via environment variables.
+app:
+  security:
+    enabled: true
+    username: ${APP_USERNAME}
+    password: ${APP_PASSWORD}
+
+spring:
+  jpa:
+    hibernate.ddl-auto: validate
+  mail:
+    properties.mail.smtp: { auth: true, starttls.enable: true }
